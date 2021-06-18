@@ -34,7 +34,7 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 # Solution
 !['IoT Architecture'](https://github.com/amandewatnitrr/zenatix-intern-selection/blob/main/iot_architecture.png)
 
-## Edit config section in the code
+## Edit config section in the Edge code
 
 1. You must have created your own Realtime Firebase Database
 
