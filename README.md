@@ -49,11 +49,11 @@ config = {
 2. Edit this ection in edge file to make sure data is being writtten to a specific node with name of your choice.
 
 ```Python
-                firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None) # Replace with the Relational Database link here
-                result = firebase.get('/main_test/1-set/','') # Name the branch node where you are storing the data
+firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None) # Replace with the Relational Database link here
+result = firebase.get('/main_test/1-set/','') # Name the branch node where you are storing the data
 ```
 3. Update the node branch name where data is being written accordingly.
 ```Python
-            data = {"timestamp":t,"sensor_data":float(k),"sensor":s}
-            db.child("main_test").child("1-set").set(data)
+data = {"timestamp":t,"sensor_data":float(k),"sensor":s}
+db.child("main_test").child("1-set").set(data)
 ```
