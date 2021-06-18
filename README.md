@@ -33,3 +33,12 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 
 # Solution
 !['IoT Architecture'](https://github.com/amandewatnitrr/zenatix-intern-selection/blob/main/iot_architecture.png)
+
+```Python
+config = {
+  "apiKey": "database-secret", # Found in Service Settings
+  "authDomain": "bmp180-1569c.firebaseapp.com", # Replace 'bmp180-1569c' with your database id
+  "databaseURL": "https://bmp180-1569c-default-rtdb.firebaseio.com", # Create a relational database and replace the link here
+  "storageBucket": "bmp180-1569c.appspot.com" # Replace 'bmp180-1569c' with your database id
+}
+```
