@@ -42,7 +42,7 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 pip install -r requirements.txt
 ```
 
-## Edit config section in the Edge code
+## Edit config section in the Edge and Server code
 
 1. You must have created your own Realtime Firebase Database
 
