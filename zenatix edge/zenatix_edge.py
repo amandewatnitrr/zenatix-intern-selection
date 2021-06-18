@@ -1,11 +1,9 @@
-import Adafruit_BMP.BMP085 as BMP085 
 import time
 import pyrebase
 import requests
 import random
 import decimal
 import csv
-sensor = BMP085.BMP085()
 from firebase import firebase
 
 TOKEN = "ddGzXBrit5jLqp15ssLon8oPUZs1X0IHs3HIHyEZ"  # Put your TOKEN here
@@ -22,10 +20,12 @@ config = {
   "storageBucket": "bmp180-1569c.appspot.com"
 }
 
+count = 0
+
 firebase = pyrebase.initialize_app(config)
 db = firebase.database()
 
-def update_database():  
+def update_database(count):  
   
     #temp = format(sensor.read_temperature())
     #pres = format(sensor.read_pressure())
@@ -48,9 +48,17 @@ def update_database():
             k = f'{row["Value"]}'
             s = f'{row["Sensor"]}'
             print(row['Value'])
+            if count!=0:
+                from firebase import firebase
+                firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None)
+                result = firebase.get('/main_test/1-set/','')
+                #if result['status']==0:   
             data = {"timestamp":t,"sensor_data":float(k),"sensor":s}
             db.child("main_test").child("1-set").set(data)
+            #from firebase import firebase
+            #firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None)
+            #result = firebase.get('/main_test/1-set', '')
             time.sleep(3);
     
-update_database()
+update_database(count)
 
