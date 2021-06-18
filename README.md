@@ -30,3 +30,6 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 
 1. For local buffering of data on the Edge program, you can use any queueing mechanism or open-source software.
 2. Please do add requirements.txt file in code
+
+# Solution
+!['IoT Architecture'](https://github.com/amandewatnitrr/zenatix-intern-selection/blob/main/iot_architecture.png)
