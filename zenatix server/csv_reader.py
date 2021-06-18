@@ -1,11 +1,7 @@
-import csv
+from csv import reader
 
-with open('dataset.csv', mode='r') as csv_file:
-    csv_reader = csv.DictReader(csv_file)
-    line_count = 0
+with open('bmp_180.csv', 'r', encoding='UTF8') as f:
+    csv_reader = reader(f)
+    row =csv_reader
     for row in csv_reader:
-        if line_count == 0:
-            line_count += 1
-        k = f'{row["Value"]}'
-        print(k)
-        line_count += 1
+        print(row)
