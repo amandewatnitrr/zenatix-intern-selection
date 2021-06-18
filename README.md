@@ -1,5 +1,6 @@
 # Zenatix-Intern-Selection
-<p align="centre"><img style="float=left;" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/bb0cc783196fa9b2119864ff90eb5702.gif" width="50%"/></p>
+<p align="center"><img style="float=left;" src="https://github.com/amandewatnitrr/evolution-hacknitr/blob/main/imgs/bb0cc783196fa9b2119864ff90eb5702.gif" width="50%"/></p>
+
 ## Problem Statement:
 
 Consider that an IoT device publishes data to your middleware software which is then published to the cloud.
