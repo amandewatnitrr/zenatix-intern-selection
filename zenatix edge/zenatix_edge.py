@@ -6,8 +6,8 @@ import decimal
 import csv
 from firebase import firebase
 
-TOKEN = "ddGzXBrit5jLqp15ssLon8oPUZs1X0IHs3HIHyEZ"  # Put your TOKEN here
-DSN = 'https://bmp180-1569c.firebaseio.com/' # 'https://myapp.firebaseio.com/'
+# TOKEN = "ddGzXBrit5jLqp15ssLon8oPUZs1X0IHs3HIHyEZ"  # Put your TOKEN here
+# DSN = 'https://bmp180-1569c.firebaseio.com/' # 'https://myapp.firebaseio.com/'
 #SECRET = 'shruti7376036196' # 'secretkey'
 #EMAIL ='shruti456rawal@gmail.com' # 'prateekrai266@gmail.com'
 
