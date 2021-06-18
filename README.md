@@ -60,8 +60,13 @@ config = {
 firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None) # Replace with the Relational Database link here
 result = firebase.get('/main_test/1-set/','') # Replace with name of the branch node where you are storing the data
 ```
-3. Edit this ection in edge file to make sure data is being writtten to a specific node with name of your choice.
+3. Edit this section to make sure data is being writtten to a specific node with name of your choice.
 ```Python
+## Edge File
 data = {"timestamp":t,"sensor_data":float(k),"sensor":s} # Name of the nodes respective to variable 
 db.child("main_test").child("1-set").set(data) # Node Brach name where data is being pushed
+
+## Server File
+if (value == " " or (float(round((ts2-ts).total_seconds() / 60))>1)) and count != 0:
+        db.child("main_test").child("1-set").child('status').set(0) # Node Brach name where data is being pushed
 ```
