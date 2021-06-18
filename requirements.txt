@@ -28,6 +28,7 @@ cryptography==2.6.1
 cupshelpers==1.0
 cycler==0.10.0
 decorator==4.3.0
+diagrams==0.20.0
 docutils==0.14
 drumhat==0.1.0
 entrypoints==0.3
@@ -41,6 +42,7 @@ google-auth==1.31.0
 google-auth-oauthlib==0.4.4
 googleapis-common-protos==1.52.0
 gpiozero==1.6.2
+graphviz==0.16
 gspread==3.7.0
 guizero==0.6.0
 html5lib==1.0.1
