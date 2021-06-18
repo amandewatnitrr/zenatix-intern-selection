@@ -34,6 +34,13 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 # Solution
 !['IoT Architecture'](https://github.com/amandewatnitrr/zenatix-intern-selection/blob/main/iot_architecture.png)
 
+## Setting Up 
+1. cd to the directory where requirements.txt is located.
+2. Run in shell below command.
+```Terminal
+pip install -r requirements.txt
+```
+
 ## Edit config section in the Edge code
 
 1. You must have created your own Realtime Firebase Database
