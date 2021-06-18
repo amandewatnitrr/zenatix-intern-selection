@@ -46,14 +46,14 @@ config = {
   "storageBucket": "bmp180-1569c.appspot.com" # Replace 'bmp180-1569c' with your database id
 }
 ```
-2. Edit this ection in edge file to make sure data is being writtten to a specific node with name of your choice.
+2. This particular section will obtain the previous data from firebase before pushing the live data
 
 ```Python
 firebase = firebase.FirebaseApplication('https://bmp180-1569c-default-rtdb.firebaseio.com', None) # Replace with the Relational Database link here
-result = firebase.get('/main_test/1-set/','') # Name the branch node where you are storing the data
+result = firebase.get('/main_test/1-set/','') # Replace with name of the branch node where you are storing the data
 ```
-3. Update the node branch name where data is being written accordingly.
+3. Edit this ection in edge file to make sure data is being writtten to a specific node with name of your choice.
 ```Python
-data = {"timestamp":t,"sensor_data":float(k),"sensor":s}
-db.child("main_test").child("1-set").set(data)
+data = {"timestamp":t,"sensor_data":float(k),"sensor":s} # Name of the nodes respective to variable 
+db.child("main_test").child("1-set").set(data) # Node Brach name where data is being pushed
 ```
