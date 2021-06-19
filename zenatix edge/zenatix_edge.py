@@ -46,7 +46,7 @@ def update_database(count):
             db.child("main_test").child("1-set").set(data)
             count = count + 1
             success = count- buffer
-            time.sleep(1)
+            time.sleep(60)
     print("Success:",success,", Buffer:",buffer)
     
 update_database(count)
