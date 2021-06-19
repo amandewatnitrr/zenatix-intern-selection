@@ -30,18 +30,17 @@ def read_cloud(count,ts):
     value = str(result['sensor_data'])
     sensor = str(result['sensor'])
     ts2 = datetime.strptime(timer, fmt)
-    if (value == " " or (float(round((ts2-ts).total_seconds() / 60))>1)) and count != 0:
-        db.child("main_test").child("1-set").child('status').set(0)
-    #else:
-        #db.child("main_test").child("1-set").child('status').set(random.choice([0,1]))
-    data = [timer,value,sensor]
+    if (value == " " or (int(round((ts2-ts).total_seconds() / 60))>1)) and count != 0:
+        db.child("main_test").child("1-set").child('status').set(float((ts2-ts).total_seconds() / 60))
+    else:
+        db.child("main_test").child("1-set").child('status').set(1)
+    data = [timer,value,sensor,str(int((ts2-ts).total_seconds() / 60))]
     with open('bmp_180.csv', 'a', encoding='UTF8') as f:
         writer = csv.writer(f)
         writer.writerow(data)
     print(data,float(round((ts2-ts).total_seconds() / 60)))
-    time.sleep(3)
     count = count+1
     read_cloud(count,ts2)
+    
 
 read_cloud(count,ts1)
-
