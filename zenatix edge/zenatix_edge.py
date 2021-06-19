@@ -45,8 +45,6 @@ def update_database(count):
             data = {"timestamp":t,"sensor_data":float(k),"sensor":s}
             db.child("main_test").child("1-set").set(data)
             count = count + 1
-            success = count- buffer
             time.sleep(60)
-    print("Success:",success,", Buffer:",buffer)
     
 update_database(count)
