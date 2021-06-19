@@ -39,7 +39,7 @@ Expose a route on an HTTP server or a topic on MQTT broker which accepts data. I
 1. cd to the directory where requirements.txt is located.
 2. Run in shell below command.
 ```Terminal
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Edit config section in the Edge and Server code
